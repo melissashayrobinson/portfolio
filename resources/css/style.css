@@ -20,7 +20,7 @@ body {
 header {
 	width: 100%;
 	height: 70px;
-	background-color: hsla(343, 96%, 89%, 0.80);
+	background-color: hsla(343, 96%, 89%, 0.90);
 	padding: 0 2rem 0 3rem;
 	display: flex;
 	justify-content: space-between;
@@ -29,6 +29,9 @@ header {
 	top: 0;
 }
 
+strong {
+	font-weight: 700;
+}
 nav li {
 	display: inline;
 	padding: 0 1rem;
@@ -44,10 +47,13 @@ nav li {
 	margin: 70px auto 2rem auto;
 	padding: 2rem 2rem 2rem 2rem;
 	border: 6px solid hsl(343, 100%, 50%);
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 	margin-bottom: 2rem;
 	padding-right: 300px;
 }
@@ -60,14 +66,17 @@ h2 {
 	border-bottom: 3px solid red;
 	font-weight: 700;
 	margin-top: 2rem;
+	background-color: #FFFFFF;
 }
 
 h3 {
 	font-size: 2rem;
+	color: hsla(343, 96%, 50%, 1);
+	margin-bottom: .5rem;
 }
 
 h4 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 
 p {
@@ -75,39 +84,44 @@ p {
 
 .work {
 	width: 100%;
-	background-color: hsl(210, 18%, 96%);
+	background-color: hsl(343, 96%, 96%);
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	flex-wrap: wrap;
 }
 
-.project {
+.project-wrap {
 	width: 100%;
 	margin: 2rem 3rem;
+}
+
+.project {
+	width: 100%;
 	display: grid;
-	justify-content: start;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-	grid-template-rows: 60px 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-column-gap: 2rem;
 	grid-row-gap: 1rem;
-	grid-auto-rows: 1fr;
-	grid-auto-flow: row;
+    grid-auto-flow: dense;
+}
+
+.project-images {
+	width: 100%;
+	grid-column-end: span 2;
+}
+
+.details {
+	min-width: 250px;
+	border: 1px solid hsla(343, 96%, 50%, 1);
+	padding: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
 }
 
 .project-title {
 	width: 100%;
-	min-width: 100%;
-	grid-column: 1 / -1;
-	display: flex;
-	flex-wrap: wrap;
-	align-content: flex-end;
-}
-
-.project h3 {
-	color: hsla(343, 96%, 50%, 1);
-	margin-bottom: .5rem;
-	width: 100%;
+	margin-bottom: 1rem;
 }
 
 .live-project {
@@ -117,19 +131,7 @@ p {
 .project img {
 	width: 100%;
 	height: auto;
-	min-width: 500px;
-	display: block;
 	object-fit: cover;
-}
-
-.details {
-	min-width: 250px;
-	max-width: 320px;
-	border: 1px solid hsla(343, 96%, 50%, 1);
-	padding: 1rem;
-	display: flex;
-	flex-wrap: wrap;
-	align-content: flex-start;
 }
 
 .language {
@@ -158,6 +160,9 @@ p {
 	margin: 2rem 2rem 2rem 2rem;
 	padding: 2rem 2rem 2rem 2rem;
 	border: 6px solid hsl(343, 100%, 50%);
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
 }
 
 .contact-links {
@@ -192,35 +197,12 @@ footer {
 	
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width : 1062px ){
 h1 {
-	font-size: 4rem;
-	margin-bottom: 2rem;
 	padding-right: 0px;
 }
+	
+.details {
+	grid-column-end: span 2;
 }
-
-
-/* sample */
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 10px;
-    grid-auto-flow: dense;
-    list-style: none;
-    margin: 1em auto;
-    padding: 0;
-    max-width: 800px;
-}
-.wrapper li {
-    border: 1px solid #ccc;
-}
-.wrapper li.landscape {
-    grid-column-end: span 2;
-}
-.wrapper li img {
-   display: block;
-   object-fit: cover;
-   width: 100%;
-   height: 100%;
 }
