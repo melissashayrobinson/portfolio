@@ -20,7 +20,8 @@ body {
 header {
 	width: 100%;
 	height: 70px;
-	padding: 0 2rem;
+	background-color: hsla(343, 96%, 89%, 0.80);
+	padding: 0 2rem 0 3rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -39,13 +40,187 @@ nav li {
 
 .hero {
 	width: calc(100% - 4rem);
-	height: calc(100vh - 70px);
-	margin-top: 70px;
-	margin: 70px auto auto auto;
-	padding: 2rem;
+	min-height: calc(100vh - 102px);
+	margin: 70px auto 2rem auto;
+	padding: 2rem 2rem 2rem 2rem;
 	border: 6px solid hsl(343, 100%, 50%);
 }
 
 h1 {
 	font-size: 4rem;
+	margin-bottom: 2rem;
+	padding-right: 300px;
+}
+
+h2 {
+	padding: 1rem 3rem;
+	font-size: 1rem;
+	border-top: 3px solid red;
+	border-right: 3px solid red;
+	border-bottom: 3px solid red;
+	font-weight: 700;
+	margin-top: 2rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+h4 {
+	font-size: 2rem;
+}
+
+p {
+}
+
+.work {
+	width: 100%;
+	background-color: hsl(210, 18%, 96%);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.project {
+	width: 100%;
+	margin: 2rem 3rem;
+	display: grid;
+	justify-content: start;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	grid-template-rows: 60px 1fr;
+	grid-column-gap: 2rem;
+	grid-row-gap: 1rem;
+	grid-auto-rows: 1fr;
+	grid-auto-flow: row;
+}
+
+.project-title {
+	width: 100%;
+	min-width: 100%;
+	grid-column: 1 / -1;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-end;
+}
+
+.project h3 {
+	color: hsla(343, 96%, 50%, 1);
+	margin-bottom: .5rem;
+	width: 100%;
+}
+
+.live-project {
+	font-size: 1rem;
+}
+
+.project img {
+	width: 100%;
+	height: auto;
+	min-width: 500px;
+	display: block;
+	object-fit: cover;
+}
+
+.details {
+	min-width: 250px;
+	max-width: 320px;
+	border: 1px solid hsla(343, 96%, 50%, 1);
+	padding: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.language {
+	background-color: hsla(343, 96%, 50%, 0.1);
+	padding: .6rem 1rem;
+	margin: 0 .5rem .5rem 0;
+	border-radius: 4px;
+	font-size: 1rem;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	letter-spacing: .06rem;
+}
+
+.notes {
+	margin-top: 1rem;
+	line-height: 1.25rem;
+	width: 100%;
+}
+
+.anchor {
+	position: relative;
+	bottom: 70px;
+}
+.contact {
+	max-width: 100%;
+	min-height: calc(100vh - 134px);
+	margin: 2rem 2rem 2rem 2rem;
+	padding: 2rem 2rem 2rem 2rem;
+	border: 6px solid hsl(343, 100%, 50%);
+}
+
+.contact-links {
+	width: 100%;
+	margin: 2rem 3rem 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.contact-links p {
+	background-color: hsla(343, 96%, 50%, .9);
+	color: white;
+	padding: .6rem 1rem;
+	margin: .5rem .5rem 0rem 0;
+	border-radius: 4px;
+	font-size: .8rem;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	letter-spacing: .06rem;
+}
+
+footer {
+	height: 70px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer {
+	font-size: .9rem;
+	
+}
+
+@media only screen and (max-width: 1024px) {
+h1 {
+	font-size: 4rem;
+	margin-bottom: 2rem;
+	padding-right: 0px;
+}
+}
+
+
+/* sample */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    grid-auto-flow: dense;
+    list-style: none;
+    margin: 1em auto;
+    padding: 0;
+    max-width: 800px;
+}
+.wrapper li {
+    border: 1px solid #ccc;
+}
+.wrapper li.landscape {
+    grid-column-end: span 2;
+}
+.wrapper li img {
+   display: block;
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
 }
