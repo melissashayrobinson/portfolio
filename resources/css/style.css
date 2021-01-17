@@ -208,3 +208,15 @@ h1 {
 	grid-column-end: span 2;
 }
 }
+
+
+@media only screen and (max-width : 300px ){
+h1 {
+	font-size: 1.5rem;
+	padding-right: 0px;
+}
+	
+.details {
+	grid-column-end: span 2;
+}
+}
