@@ -173,6 +173,7 @@ p {
 	justify-content: flex-start;
 }
 
+
 .contact-links p {
 	background-color: hsla(343, 96%, 50%, .9);
 	color: white;
@@ -199,6 +200,7 @@ footer {
 
 @media only screen and (max-width : 1062px ){
 h1 {
+	font-size: 2.5rem;
 	padding-right: 0px;
 }
 	
