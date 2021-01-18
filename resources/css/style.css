@@ -164,6 +164,11 @@ p {
 	width: 100%;
 }
 
+hr {
+	border: 3px solid red;
+	width: 100%;
+	margin: auto 2rem;
+}
 .contact {
 	max-width: 100%;
 	min-height: calc(100vh - 134px);
