@@ -66,9 +66,8 @@ nav li {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 5vw;
 	margin-bottom: 2rem;
-	padding-right: 300px;
 }
 
 h2 {
@@ -214,10 +213,6 @@ footer {
 }
 
 @media only screen and ( min-width : 401px ) and ( max-width : 1062px ){
-h1 {
-	font-size: 2.5rem;
-	padding-right: 0px;
-}
 	
 .details {
 	grid-column-end: span 2;
@@ -226,10 +221,7 @@ h1 {
 
 
 @media only screen and (max-width : 400px ){
-	h1 {
-	  font-size: 1.5rem;
-	  padding-right: 0px;
-	}
+
 	
 	h3 {
 	  font-size: 1.5rem;
